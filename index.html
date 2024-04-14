@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+</head>
+<body>
+    <h1>Employee Management</h1>
+
+    <!-- Form to retrieve all employee records -->
+    <h2>Retrieve All Employee Data</h2>
+    <form action="/retrieveAll" method="GET">
+        <button type="submit">Retrieve All Employees</button>
+    </form>
+
+    <!-- Form to retrieve a single employee record by ID -->
+    <h2>Retrieve Employee by ID</h2>
+    <form action="/retrieve" method="GET">
+        <label for="retrieveEmployeeID">Employee ID:</label>
+        <input type="number" id="retrieveEmployeeID" name="employeeID" required><br><br>
+        <button type="submit">Retrieve Employee</button>
+    </form>
+
+    <!-- Form to register employee details -->
+    <h2>Register Employee</h2>
+    <form action="/register" method="POST">
+        <label for="registerEmployeeID">Employee ID:</label>
+        <input type="number" id="registerEmployeeID" name="employeeID" required><br><br>
+        <label for="registerFirstName">First Name:</label>
+        <input type="text" id="registerFirstName" name="firstName" required><br><br>
+        <label for="registerLastName">Last Name:</label>
+        <input type="text" id="registerLastName" name="lastName" required><br><br>
+        <label for="registerDepartment">Department:</label>
+        <input type="text" id="registerDepartment" name="department" required><br><br>
+        <label for="registerSalary">Salary:</label>
+        <input type="number" id="registerSalary" name="salary" required><br><br>
+        <button type="submit">Register Employee</button>
+    </form>
+
+    <!-- Form to update employee details -->
+    <h2>Update Employee Details</h2>
+    <form action="/update" method="POST">
+        <label for="updateEmployeeID">Employee ID:</label>
+        <input type="number" id="updateEmployeeID" name="employeeID" required><br><br>
+        <label for="updateFirstName">First Name:</label>
+        <input type="text" id="updateFirstName" name="firstName" required><br><br>
+        <label for="updateLastName">Last Name:</label>
+        <input type="text" id="updateLastName" name="lastName" required><br><br>
+        <label for="updateDepartment">Department:</label>
+        <input type="text" id="updateDepartment" name="department" required><br><br>
+        <label for="updateSalary">Salary:</label>
+        <input type="number" id="updateSalary" name="salary" required><br><br>
+        <button type="submit">Update Employee</button>
+    </form>
+
+    <!-- Form to delete record of an employee by ID -->
+    <h2>Delete Employee Record</h2>
+    <form action="/delete" method="POST">
+        <label for="deleteEmployeeID">Employee ID:</label>
+        <input type="number" id="deleteEmployeeID" name="employeeID" required><br><br>
+        <button type="submit">Delete Employee Record</button>
+    </form>
+</body>
+</html>
